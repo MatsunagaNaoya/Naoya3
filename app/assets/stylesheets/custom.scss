@@ -51,11 +51,16 @@ p {
 }
 
 /* ヘッダー */
+.navbar-inverse {
+  background-color: #008000;
+}
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
+	font-style:italic;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -64,9 +69,46 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #808080;
   text-decoration: none;
 }
+
+#header-drop {
+  color: #fff;
+}
+
+#header-drop:hover {
+  color: #808080;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #008000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    background-color: #008000;
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+    background-color: #008000;
+}
+
+.dropdown-menu > li > a:hover {
+    color: #808080;
+    background-color: #008000;
+}
+
+.dropdown-menu {
+    color: #fff;
+    background-color: #008000;
+}
+
+.dropdown-menu:hover {
+    color: #fff;
+}
+
 
 /* デバッグウインドウ */
 
