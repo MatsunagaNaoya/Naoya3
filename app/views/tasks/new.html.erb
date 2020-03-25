@@ -1,2 +1,13 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">新規投稿</h1>
+    <%= form_tag user_tasks_path do %>
+      <div class="form">
+        <div class="form-body">
+          <textarea name="comment"></textarea>
+          <input type="submit" value="投稿">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
