@@ -10,4 +10,8 @@ class TasksController < ApplicationController
   def edit
   end
 
+  def show
+    @task_id = pasams[:id]
+  end
+  
 end
