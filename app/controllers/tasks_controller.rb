@@ -1,11 +1,12 @@
 class TasksController < ApplicationController
-
+  before_action :set_user
+  
   def index
-    @tasks = @user.task.all
+    @tasks = @user.tasks
   end
 
   def show
-    # @task_id = params[:id]
+    @comment = @task.comments.build
   end
 
   def new
@@ -30,7 +31,6 @@ class TasksController < ApplicationController
     
     def set_user
        @user = User.find(params[:user_id])
-       
     end
     
     def task_params
