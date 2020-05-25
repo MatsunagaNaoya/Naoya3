@@ -15,12 +15,6 @@
           <td><%= @task.name %></td>
         </tr>
         <tr>
-          <th class="active"><%= Task.human_attribute_name :worked_on %></th>
-          <td>
-            <%= auto_link(safe_join(@task.description.split("\n"), tag(:br))) %>
-          </td>
-        </tr>
-        <tr>
           <th class="active"><%= Task.human_attribute_name :created_at %></th>
           <td><%= l(@task.created_at, format: :long) %></td>
         </tr>
@@ -31,10 +25,6 @@
       </tbody>
     </table>
     
-    <div>
-      <%= link_to "編集", edit_user_task_path(@user, @task), class: "btn btn-lg btn-success" %>
-      <%= link_to "削除", user_task_path(@user, @task), method: :delete,
-      data: { confirm: "「#{@task.name}」を削除します。よろしいですか？" }, class: "btn btn-lg btn-danger" %>
     </div>
   </div>    
 </div>
