@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   end
   
   def create
-    @task = Task.new(comment: params[:comment])
+    @task = Task.new(task_params)
     if @task.save
       flash[:success] = "タスク新規作成しました。"
       redirect_to user_tasks_url @user
@@ -34,7 +34,7 @@ class TasksController < ApplicationController
     end
     
     def task_params
-      params.require(:task).permit(:title,:note,:user_id)
+      params.require(:task).permit(:comment, :worked_on, :user_id)
 
     end
 end
